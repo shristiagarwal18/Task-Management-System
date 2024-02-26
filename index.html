@@ -1,0 +1,86 @@
+<div>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Tracker</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Task Management System </h1>
+            </header>
+            <form id="taskForm" class="task-form">
+                <div class="form-group">
+                    <label for="taskid">Task Id</label>
+                    <input type="text" id="taskid" placeholder="Task Id" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="assignto">Assigned To</label>
+                    <select id="assignto" required>
+                        <option value="">--Select --</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Add Task</button>
+            </form>
+
+            <div class="controls">
+                <div class="form-group">
+                    <label for="viewSelect">Select Task</label>
+                    <select id="viewSelect">
+                        <option value="">-- Select --</option>
+                    </select>
+                </div>
+            </div>
+
+            <section id="taskList" class="task-list"></section>
+
+            <div class="controls">
+                <div class="form-group">
+                    <label for="reportSelect">Select User</label>
+                    <select id="reportSelect">
+                        <option value="">-- Select --</option>
+                    </select>
+                </div>
+            </div>
+
+            <section id="reportList">
+                <h1 id="reportHeading"></h1>       
+                <div id="form">             
+                     <p id="reportid"></p>
+                        <p id="reportdate"></p>
+                    </div>
+
+                <table id="myTable" border="1">
+                <thead>
+                    <tr>
+                        <th style="width:20%">Task Id</th>
+                        <th style="width:60%">Description</th>
+                        <th style="width:40%">Due Date</th>
+                        <th style="width:40%">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+                </table>
+
+            </section>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+
+    </html>
+
+</div>
